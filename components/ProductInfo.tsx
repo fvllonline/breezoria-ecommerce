@@ -10,7 +10,7 @@ export default function ProductInfo() {
   const [isAdding, setIsAdding] = useState(false);
   const { addToCart } = useCart();
 
-  const price = 399;
+  const price = 279;
 
   const handleAddToCart = () => {
     setIsAdding(true);

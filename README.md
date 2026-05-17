@@ -1,255 +1,98 @@
-# Breezoria - Premium Suncare E-Commerce Website
+# ✨ Breezoria - Premium Suncare Brand
 
-A modern, elegant e-commerce website for **Breezoria**, a premium luxury suncare brand. Built with Next.js 15, TypeScript, Tailwind CSS, shadcn/ui, and Framer Motion.
+Breezoria est une application e-commerce moderne et élégante dédiée à la vente de produits de protection solaire premium. Conçue avec une esthétique luxueuse et épurée, elle offre une expérience utilisateur fluide, de la découverte du produit jusqu'à la confirmation de commande.
 
-## ✨ Features
-
-- **Hero Section**: Stunning premium hero with animated background and CTA
-- **About Breezoria**: Brand mission and value proposition
-- **Product Highlight**: Featured product with benefits and pricing
-- **Benefits Section**: 6 key product benefits with elegant card design
-- **Testimonials**: Customer reviews with star ratings
-- **Contact Form**: Functional contact section with validation
-- **Product Details Page**: 
-  - Professional product gallery with image switching
-  - Product specifications and ingredients
-  - How to use instructions
-  - Quantity selector and Add to Cart
-  - Sticky product summary
-- **Shopping Cart System**:
-  - Add/remove items
-  - Quantity management
-  - Persistent cart state
-  - Cart badge on navbar
-  - Slide-over drawer interface
-- **Checkout Flow**:
-  - Customer information form
-  - Order validation modal
-  - Success confirmation
-- **Responsive Design**: Mobile-first design that works perfectly on all devices
-- **Smooth Animations**: Elegant Framer Motion animations throughout
-- **Luxury Aesthetic**: Premium design with warm color palette (orange, warm yellow, soft cream)
-
-## 🎨 Design System
-
-**Color Palette:**
-- **Primary (Orange)**: `oklch(0.65 0.25 55)` - Main brand color
-- **Secondary (Warm Yellow)**: `oklch(0.85 0.18 65)` - Accent color
-- **Background (Cream)**: `oklch(0.99 0.005 60)` - Warm off-white background
-- **Foreground (Dark)**: `oklch(0.2 0.01 30)` - Text color
-
-## 📁 Project Structure
-
-```
-breezoria/
-├── app/
-│   ├── layout.tsx           # Root layout with CartProvider
-│   ├── page.tsx             # Home page
-│   ├── product/
-│   │   └── page.tsx         # Product details page
-│   └── globals.css          # Global styles with design tokens
-├── components/
-│   ├── Navbar.tsx           # Sticky navigation
-│   ├── Footer.tsx           # Footer with links
-│   ├── CartDrawer.tsx       # Cart slide-over drawer
-│   ├── CheckoutModal.tsx    # Checkout modal form
-│   ├── ProductGallery.tsx   # Product image gallery
-│   ├── ProductInfo.tsx      # Product details and add to cart
-│   └── sections/
-│       ├── HeroSection.tsx          # Hero with animation
-│       ├── AboutSection.tsx         # Brand about section
-│       ├── ProductHighlightSection.tsx # Featured product
-│       ├── BenefitsSection.tsx      # 6 benefits cards
-│       ├── TestimonialsSection.tsx  # Customer reviews
-│       └── ContactSection.tsx       # Contact form
-├── context/
-│   └── CartContext.tsx      # Cart state management
-├── public/
-│   └── images/
-│       ├── hero-suncare.jpg        # Hero image
-│       ├── product-1.jpeg           # Product main view
-│       ├── product-2.jpeg           # Product side view
-│       ├── product-3.jpeg           # Product texture detail
-│       └── product-4.jpeg           # Lifestyle shot
-└── package.json
-```
-
-## 🚀 Getting Started
-
-### Installation
-
-1. Clone or download the repository
-2. Install dependencies:
-
-```bash
-npm install
-# or
-pnpm install
-# or
-yarn install
-```
-
-### Development
-
-Start the development server:
-
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-## 📸 Product Images
-
-The project includes 4 product image placeholders:
-
-**Location:** `public/images/product/`
-
-**Files:**
-- `product-1.jpeg` - Main product view (featured in gallery)
-- `product-2.jpeg` - Side/alternate view
-- `product-3.jpeg` - Texture/detail close-up
-- `product-4.jpeg` - Lifestyle shot with beach setting
-
-**How to Replace:**
-1. Generate or prepare your product images (recommended: 1000x1000px JPG)
-2. Replace the corresponding files in the `public/images/` directory
-3. Images will automatically update throughout the site
-
-## 🛒 Shopping Cart Features
-
-The cart system uses React Context API for state management:
-
-- **Add to Cart**: Add products with custom quantities
-- **Cart Badge**: Shows number of items in cart
-- **Cart Drawer**: Slide-over interface with item management
-- **Quantity Control**: Increase/decrease items or remove
-- **Checkout**: Modal form with customer information
-- **Order Confirmation**: Success message after submission
-
-### Cart Context Usage
-
-```typescript
-import { useCart } from '@/context/CartContext';
-
-function MyComponent() {
-  const { items, addToCart, total, itemCount } = useCart();
-  // Use cart methods...
-}
-```
-
-## 🎯 Routing
-
-**Pages:**
-- `/` - Home page (all sections + hero)
-- `/product` - Single product details page
-
-**Navigation:**
-- Sticky navbar with smooth scroll links
-- Home, Product, Contact links
-- Cart icon with item count badge
-
-## 🎬 Animations
-
-Uses **Framer Motion** for smooth, elegant animations:
-- Fade-in and slide-up on scroll
-- Hover effects on cards and buttons
-- Cart drawer slide animation
-- Modal animations
-- Button scale feedback
-- Staggered list animations
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4.2
-- **UI Components**: shadcn/ui
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **State Management**: React Context API
-
-## 📝 Customization
-
-### Colors
-
-Edit the color tokens in `app/globals.css`:
-
-```css
-:root {
-  --primary: oklch(0.65 0.25 55);      /* Primary orange */
-  --secondary: oklch(0.85 0.18 65);    /* Warm yellow */
-  --background: oklch(0.99 0.005 60);  /* Cream background */
-  --foreground: oklch(0.2 0.01 30);    /* Dark text */
-}
-```
-
-### Product Information
-
-Edit `components/ProductInfo.tsx` and `app/product/page.tsx` to update:
-- Product name and description
-- Price and specifications
-- Benefits and features
-- Ingredients list
-- How to use instructions
-
-### Homepage Content
-
-Edit sections in `components/sections/` to customize:
-- Hero headline and description
-- About mission statement
-- Benefits text
-- Testimonials
-- Contact form fields
-
-## 🚀 Deployment
-
-Ready to deploy with Vercel:
-
-```bash
-npm run build
-npm start
-```
-
-Or deploy directly to Vercel:
-
-```bash
-vercel deploy
-```
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 768px (optimized layout)
-- **Tablet**: 768px - 1024px (2-column grids)
-- **Desktop**: > 1024px (full 3-column layouts)
-
-## ✅ Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 🎓 Academic Presentation
-
-This project is suitable for:
-- E-commerce portfolio showcase
-- Module validation project
-- Case study presentation
-- Design and development demonstration
-
-The clean architecture, responsive design, and premium aesthetics make it ideal for academic and professional presentations.
-
-## 📄 License
-
-Created for educational and portfolio purposes.
+## 🌟 Vision du Produit
+Breezoria se positionne comme une marque de soin de la peau haut de gamme. Son produit phare, l'**Invisible Matte Finish Sunscreen (SPF 50 PA+++)**, combine une protection solaire maximale avec les bénéfices d'un primer cosmétique :
+- **Fini Mat :** Contrôle l'excès de sébum pour une peau veloutée.
+- **Effet Flouteur :** Estompe les pores et les imperfections.
+- **Zéro Trace Blanche :** Formule chimique invisible adaptée à toutes les carnations.
+- **Compatible Maquillage :** Base parfaite qui ne bouge pas.
 
 ---
 
-**Built with ❤️ for Breezoria**
+## 🚀 Technologies Utilisées
 
-For questions or customizations, refer to the component files and configuration options in the codebase.
+### Frontend
+- **Framework :** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Langage :** [TypeScript](https://www.typescriptlang.org/)
+- **Styles :** [Tailwind CSS 4.0](https://tailwindcss.com/)
+- **Composants UI :** [shadcn/ui](https://ui.shadcn.com/) (basé sur Radix UI)
+- **Animations :** [Framer Motion](https://www.framer.com/motion/)
+- **Icônes :** [Lucide React](https://lucide.dev/)
+
+### Gestion d'État & Services
+- **État Global :** React Context API (`CartContext`) pour la gestion du panier.
+- **Notifications Client :** [EmailJS](https://www.emailjs.com/) pour les emails de confirmation automatiques.
+- **Notifications Propriétaire :** [Formspree](https://formspree.io/) pour la réception des commandes par le vendeur.
+
+### Déploiement
+- **Hébergement :** [Vercel](https://vercel.com/)
+- **Analytics :** Vercel Analytics intégré.
+
+---
+
+## 🛠️ Fonctionnalités Clés
+
+### 🛒 Système de Panier Complet
+- Ajout de produits avec gestion des quantités.
+- Drawer (tiroir) latéral animé pour visualiser le panier en temps réel.
+- Calcul automatique du sous-total et du total en **MAD**.
+
+### 📱 Expérience Produit Immersive
+- Galerie d'images interactive avec zoom et sélection de miniatures.
+- Page produit détaillée avec sections informatives (Détails, Application, Ingrédients).
+- Design 100% Responsive (Mobile, Tablette, Desktop).
+
+### 📧 Workflow de Commande Automatisé
+1. **Formulaire de Checkout :** Capture du nom, email, téléphone et adresse.
+2. **Validation :** Intégration de `Loader` pour le feedback utilisateur pendant le traitement.
+3. **Confirmation Client :** Email stylisé envoyé instantanément via EmailJS.
+4. **Alerte Vendeur :** Notification détaillée envoyée via Formspree contenant le récapitulatif complet des articles.
+
+---
+
+## 📁 Structure du Projet
+
+```text
+├── app/               # Routes et pages (Next.js App Router)
+│   ├── product/       # Page produit détaillée
+│   └── layout.tsx     # Configuration globale (Fonts, Providers, Metadata)
+├── components/        # Composants React réutilisables
+│   ├── sections/      # Sections de la Landing Page (Hero, About, etc.)
+│   ├── ui/            # Composants de base shadcn/ui
+│   ├── CartDrawer.tsx # Système de panier latéral
+│   └── Navbar.tsx     # Navigation avec compteur de panier
+├── context/           # Contextes React (CartContext)
+├── public/            # Assets statiques (Images, Favicon)
+└── package.json       # Dépendances et scripts du projet
+```
+
+---
+
+## 🔧 Installation et Développement
+
+1. **Cloner le projet :**
+   ```bash
+   git clone https://github.com/fvllonline/breezoria-ecommerce.git
+   ```
+
+2. **Installer les dépendances :**
+   ```bash
+   npm install
+   # ou
+   pnpm install
+   ```
+
+3. **Lancer le serveur de développement :**
+   ```bash
+   npm run dev
+   ```
+
+4. **Variables d'environnement :**
+   Le projet utilise EmailJS et Formspree. Assurez-vous de configurer les IDs dans `components/CheckoutModal.tsx` ou via des variables d'environnement.
+
+---
+
+## 👤 Auteur
+Projet développé pour **Breezoria** - *L'excellence de la protection solaire.*
