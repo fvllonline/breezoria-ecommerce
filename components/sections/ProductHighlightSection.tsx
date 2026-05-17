@@ -76,7 +76,7 @@ export default function ProductHighlightSection() {
             </div>
 
             <div className="mb-8 p-4 bg-secondary/20 rounded-lg border border-secondary/30">
-              <p className="text-primary font-bold text-2xl mb-2">399 DH</p>
+              <p className="text-primary font-bold text-2xl mb-2">279 MAD</p>
               <p className="text-sm text-muted-foreground">SPF 50 PA+++ • 50ml • 8-hour protection</p>
             </div>
 
